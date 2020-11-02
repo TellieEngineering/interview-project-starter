@@ -1,7 +1,14 @@
+import { useEffect, useState } from 'react';
+
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const [connected, setConnected] = useState(false);
+  useEffect(() => {
+    fetch('http://localhost:8080/health').then(() => setConnected(true));
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -9,14 +16,14 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
+        <p>
+          {
+            connected
+            ? 'You are connected to the backend server 🚀'
+            : 'You are NOT connected to the backend server ❌'
+          }
+        </p>
       </header>
     </div>
   );
