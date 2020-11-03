@@ -29,7 +29,8 @@ You will also see any lint errors in the console.
 
 ### `npm run server` or `yarn server`
 
-Runs the backend server at http://localhost:8080.
+Runs the backend server ([src/server.js](src/server.js)) at http://localhost:8080.
+
 To verify it is running, in a different shell, you can do:
 
 ```bash
