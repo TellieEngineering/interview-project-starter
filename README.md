@@ -37,6 +37,11 @@ $ curl http://localhost:8080/health
 OK
 ```
 
+### Starter Kit Functional
+
+When the frontend is successfully able to talk to the backend, you should see:
+
+![Screenshot of frontend connected to backend](https://i.imgur.com/ysh0d3a.png)
 
 ## Create React App Help
 
